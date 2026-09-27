@@ -1,0 +1,69 @@
+name: AegisTitan
+version: '${project.version}'
+main: dev.aegistitan.AegisTitan
+api-version: '1.21'
+description: The Aegis Wall Shield and the Titan Cleaver.
+
+commands:
+  getshield:
+    description: Get the Aegis Wall Shield.
+    usage: /getshield [player]
+    permission: aegistitan.shield
+  shieldsize:
+    description: Choose how big your shield wall is.
+    usage: /shieldsize <width> <height>  or  /shieldsize <small|medium|large|huge|massive>
+    permission: aegistitan.size
+  getaxe:
+    description: Get the Titan Cleaver.
+    usage: /getaxe [player]
+    permission: aegistitan.axe
+  axesize:
+    description: Choose how huge your Titan Slam is.
+    usage: /axesize <1-10>  or  /axesize <normal|big|giant|colossal|mountain>
+    permission: aegistitan.axesize
+  axecooldown:
+    description: Change the Titan Slam cooldown.
+    usage: /axecooldown <seconds>  (0 or off = no cooldown)
+    permission: aegistitan.cooldown
+  gettrident:
+    description: Get the Leviathan Trident.
+    usage: /gettrident [player]
+    permission: aegistitan.trident
+  tridentsize:
+    description: Choose how colossal your Leviathan Trident is.
+    usage: /tridentsize <1-30>  or  /tridentsize <normal|big|giant|colossal|leviathan>
+    permission: aegistitan.tridentsize
+  tridentcooldown:
+    description: Change the Leviathan Ride cooldown.
+    usage: /tridentcooldown <seconds>  (0 or off = no cooldown)
+    permission: aegistitan.cooldown
+  aegistitan:
+    description: Reload the AegisTitan config.
+    usage: /aegistitan reload
+    permission: aegistitan.admin
+
+permissions:
+  aegistitan.shield:
+    description: Use /getshield
+    default: op
+  aegistitan.axe:
+    description: Use /getaxe
+    default: op
+  aegistitan.size:
+    description: Use /shieldsize
+    default: true
+  aegistitan.axesize:
+    description: Use /axesize
+    default: op
+  aegistitan.cooldown:
+    description: Use /axecooldown and /tridentcooldown
+    default: op
+  aegistitan.trident:
+    description: Use /gettrident
+    default: op
+  aegistitan.tridentsize:
+    description: Use /tridentsize
+    default: op
+  aegistitan.admin:
+    description: Give items to other players and reload the config
+    default: op

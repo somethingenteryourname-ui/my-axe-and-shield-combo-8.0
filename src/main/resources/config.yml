@@ -1,0 +1,81 @@
+# ============================================
+#  AegisTitan config
+#  Use /aegistitan reload after editing.
+# ============================================
+config-version: 3
+
+shield:
+  # Wall size (in blocks) for players who never used /shieldsize
+  default-width: 14
+  default-height: 10
+  # Limits for /shieldsize
+  min-size: 3
+  max-width: 40
+  max-height: 24
+  # How far in front of the player the wall appears
+  distance: 3.0
+  # How long the shield stays disabled after the Titan Cleaver cuts it
+  disabled-seconds: 8
+  # Bounce arrows/tridents/fireballs back off the wall
+  reflect-projectiles: true
+
+axe:
+  # Cooldown for the shift + right click Titan Slam (you can also use /axecooldown)
+  cooldown-seconds: 15
+  # How far away you can aim the slam (bigger axes reach further)
+  range: 30
+  # Biggest size players can pick with /axesize (10 = mountain splitter)
+  max-scale: 10
+  # Size of the shockwave at /axesize 1 (it grows with the axe)
+  shockwave-radius: 10
+  # Damage at the center of the shockwave / at the edge (2 = one heart)
+  max-damage: 12
+  min-damage: 4
+  knockback: 1.6
+  # A shield wall this close to the impact gets cut in half
+  shield-cut-radius: 7
+  # Crack and break up the ground around the impact
+  crater: true
+  # Split the ground/mountains along the blade's path
+  slice-terrain: true
+  # How many blocks the cut and the repair handle per tick (lower = less lag, slower)
+  blocks-per-tick: 2500
+  # Seconds before the ground repairs itself (0 = the crater stays forever)
+  crater-restore-seconds: 30
+  # Fling chunks of the ground into the air with the shockwave
+  flying-debris: true
+  # Glowing rock spikes launched out of the impact (0 = none)
+  spikes: 6
+  # Damage a spike does to anything it flies through
+  spike-damage: 6
+
+trident:
+  # Cooldown for the Leviathan Ride (you can also use /tridentcooldown).
+  # While it recharges the trident just throws normally.
+  cooldown-seconds: 10
+  # Biggest size players can pick with /tridentsize
+  max-size: 30
+  # How far you can aim the ride at size 1 (bigger tridents reach further, up to 600)
+  flight-range: 250
+  # Flight speed in blocks per tick at size 1 (never faster than 4.5, to keep chunk loading smooth)
+  flight-speed: 3.0
+  # How high the ride arcs (1.0 = default, 2.0 = twice as high, 0.3 = low and flat)
+  arc-height: 1.0
+  # Everything in the direct hit zone has its health set to 1 and then takes this much damage (60 = 30 hearts)
+  kill-damage: 60
+  # Damage to things the trident plows through on the way
+  ram-damage: 10
+  # Landing shockwave (size 1; grows with the trident up to the max)
+  shockwave-radius: 12
+  max-shockwave-radius: 90
+  max-damage: 14
+  min-damage: 5
+  knockback: 1.8
+  # Punch three huge holes in a row where the prongs hit (they repair like the axe crater)
+  holes: true
+  # Limits on how wide/deep the holes can get on gigantic tridents (keeps the server from lagging)
+  hole-max-radius: 8
+  hole-max-depth: 70
+  # When it smashes into an Aegis Wall: spikes launched and damage from the air blast
+  clash-spikes: 10
+  clash-damage: 8
